@@ -214,7 +214,45 @@ h2{
 }
 h2 em{font-style:italic;color:var(--accent);}
 
-/* BEEPR PROJECT â€” FEATURED */
+/* SERVICES SECTION */
+.services-section{
+  background:var(--surface);
+}
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;
+}
+.service-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:2rem;
+  transition:all 0.3s;
+}
+.service-card:hover{
+  border-color:rgba(0,229,255,0.2);
+  transform:translateY(-4px);
+  box-shadow:0 16px 48px rgba(0,0,0,0.4);
+}
+.service-icon{
+  font-size:2.2rem;
+  margin-bottom:1rem;
+}
+.service-title{
+  font-family:var(--font-display);
+  font-size:1.4rem;
+  color:var(--white);
+  margin-bottom:0.8rem;
+  font-weight:400;
+}
+.service-desc{
+  font-size:0.9rem;
+  color:var(--muted);
+  line-height:1.7;
+}
+
+/* BEEPR PROJECT — FEATURED */
 .featured{background:var(--surface);}
 .beepr-wrap{
   display:grid;grid-template-columns:1fr 1fr;
@@ -353,6 +391,65 @@ h2 em{font-style:italic;color:var(--accent);}
 }
 .proj-link:hover{gap:0.5rem;}
 
+/* CASE STUDIES SECTION */
+.case-studies-section{
+  background:var(--bg);
+}
+.case-studies-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;
+}
+.case-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:2rem;
+  transition:all 0.3s;
+}
+.case-card:hover{
+  border-color:rgba(0,229,255,0.2);
+  transform:translateY(-4px);
+  box-shadow:0 16px 48px rgba(0,0,0,0.4);
+}
+.case-emoji{
+  font-size:2rem;
+  margin-bottom:0.8rem;
+}
+.case-title{
+  font-family:var(--font-display);
+  font-size:1.5rem;
+  color:var(--white);
+  margin-bottom:1.5rem;
+  font-weight:400;
+}
+.case-block{
+  margin-bottom:1.2rem;
+}
+.case-label{
+  font-size:0.7rem;
+  font-weight:700;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:0.4rem;
+}
+.case-text{
+  font-size:0.9rem;
+  color:var(--muted);
+  line-height:1.7;
+}
+.case-result{
+  color:var(--gold);
+  font-weight:700;
+}
+.case-stack{
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.4rem;
+  margin-top:1.5rem;
+}
+
 /* SHOPIFY / CLIENT WORK */
 .clients-section{background:var(--surface);}
 .clients-grid{
@@ -401,6 +498,38 @@ h2 em{font-style:italic;color:var(--accent);}
   transition:all 0.2s;cursor:default;
 }
 .tech-chip:hover{border-color:var(--accent);color:var(--accent);background:rgba(0,229,255,0.04);}
+
+/* TECH SECTION */
+.tech-section{
+  background:var(--surface);
+}
+.tech-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:1rem;
+  justify-content:center;
+  padding:2rem;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+}
+.tech-item{
+  font-family:var(--font-body);
+  font-size:1.1rem;
+  font-weight:700;
+  color:var(--white);
+  padding:0.6rem 1.4rem;
+  border-radius:100px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.06);
+  letter-spacing:0.05em;
+  transition:all 0.2s;
+}
+.tech-item:hover{
+  border-color:rgba(0,229,255,0.3);
+  background:rgba(0,229,255,0.08);
+  color:var(--accent);
+}
 
 /* EXPERIENCE */
 .exp-section{background:var(--surface);}
@@ -459,6 +588,15 @@ h2 em{font-style:italic;color:var(--accent);}
 }
 .a-stat-l{font-size:0.78rem;color:var(--muted);}
 .about-text p{font-size:0.96rem;color:var(--muted);margin-bottom:1rem;line-height:1.8;}
+
+/* FINAL CTA */
+.cta-final{
+  background:var(--bg);
+  text-align:center;
+}
+.cta-final h2{
+  margin-bottom:2rem;
+}
 
 /* CONTACT */
 .contact-section{background:var(--surface);}
@@ -521,6 +659,8 @@ footer a{color:var(--accent);text-decoration:none;}
 /* RESPONSIVE */
 @media(max-width:1024px){
   .projects-grid{grid-template-columns:1fr 1fr;}
+  .services-grid{grid-template-columns:1fr 1fr;}
+  .case-studies-grid{grid-template-columns:1fr 1fr;}
   .clients-grid{grid-template-columns:1fr 1fr;}
   .beepr-wrap{grid-template-columns:1fr;gap:3rem;}
   .beepr-screens{grid-template-columns:repeat(4,1fr);}
@@ -535,6 +675,8 @@ footer a{color:var(--accent);text-decoration:none;}
   nav .nav-links{display:none;}
   .about-grid,.contact-grid,.skills-wrap{grid-template-columns:1fr;gap:2.5rem;}
   .projects-grid{grid-template-columns:1fr;}
+  .services-grid{grid-template-columns:1fr;}
+  .case-studies-grid{grid-template-columns:1fr;}
   .clients-grid{grid-template-columns:1fr 1fr;}
   .exp-item{grid-template-columns:1fr;gap:0.5rem;}
   .metrics-row{grid-template-columns:1fr 1fr 1fr;}
