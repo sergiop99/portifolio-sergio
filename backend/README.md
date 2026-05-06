@@ -5,10 +5,11 @@ Backend para o portfólio usando FastAPI + Resend para envio de emails.
 ## Como usar localmente
 
 1. Crie uma conta no [Resend](https://resend.com/) e obtenha sua API Key
-2. Copie `.env.example` para `.env` e preencha as variáveis:
+2. Copie [backend/.env.example](backend/.env.example) para `backend/.env` e preencha as variáveis:
    ```
-   RESEND_API_KEY=seu_resend_api_key
-   RECIPIENT_EMAIL=email_do_sergio@example.com
+   RESEND_API_KEY=re_sua_chave_real_aqui
+   RESEND_FROM_EMAIL=onboarding@resend.dev
+   RECIPIENT_EMAIL=sperey@gcgiglobal.com
    ```
 3. Instale as dependências:
    ```bash
@@ -16,9 +17,18 @@ Backend para o portfólio usando FastAPI + Resend para envio de emails.
    ```
 4. Execute o servidor:
    ```bash
-   python main.py
+   uvicorn main:app --reload
    ```
 5. A API estará disponível em `http://localhost:8000`
+
+## Primeiro teste com Resend
+
+Se você só quer validar o envio inicial:
+
+1. Cole sua chave real em `backend/.env` no campo `RESEND_API_KEY`
+2. Mantenha `RESEND_FROM_EMAIL=onboarding@resend.dev`
+3. Deixe `RECIPIENT_EMAIL=sperey@gcgiglobal.com`
+4. Rode o backend e envie o formulário do site
 
 ## Deploy no Render
 
@@ -29,6 +39,7 @@ Backend para o portfólio usando FastAPI + Resend para envio de emails.
    - Start Command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
 4. Adicione as variáveis de ambiente no painel do Render:
    - RESEND_API_KEY
+   - RESEND_FROM_EMAIL
    - RECIPIENT_EMAIL
 5. Deploy!
 
