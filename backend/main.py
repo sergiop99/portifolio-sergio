@@ -53,18 +53,6 @@ async def send_contact_email(form: ContactForm):
         <p><strong>Mensagem:</strong></p>
         <p>{escape(form.message)}</p>
         """
-        confirmation_subject = "Recebi sua mensagem"
-        confirmation_html = f"""
-        <h2>Mensagem recebida</h2>
-        <p>Oi {escape(form.name)}, recebi sua mensagem pelo portfólio.</p>
-        <p>Retorno assim que possível.</p>
-        <hr />
-        <p><strong>Resumo enviado:</strong></p>
-        <p><strong>Tipo de Projeto:</strong> {escape(form.project_type)}</p>
-        <p><strong>Mensagem:</strong></p>
-        <p>{escape(form.message)}</p>
-        """
-
         internal_email = resend.Emails.send({
             "from": from_email,
             "to": [recipient_email],
@@ -72,18 +60,11 @@ async def send_contact_email(form: ContactForm):
             "html": html_content,
             "reply_to": sender_email,
         })
-        confirmation_email = resend.Emails.send({
-            "from": from_email,
-            "to": [sender_email],
-            "subject": confirmation_subject,
-            "html": confirmation_html,
-        })
 
         return {
             "success": True,
             "message": "Emails enviados com sucesso!",
             "id": internal_email["id"],
-            "confirmation_id": confirmation_email["id"],
         }
 
     except Exception as e:
