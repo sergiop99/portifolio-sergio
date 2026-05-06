@@ -347,7 +347,7 @@ contactForm?.addEventListener('submit', async (event) => {
   try {
     const API_URL = window.location.hostname === 'localhost' 
       ? 'http://localhost:8000/api/contact' 
-      : 'https://your-render-backend-url.onrender.com/api/contact';
+      : 'https://portifolio-sergio-backend.onrender.com/api/contact';
       
     const response = await fetch(API_URL, {
       method: 'POST',

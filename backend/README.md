@@ -5,7 +5,7 @@ Backend para o portfólio usando FastAPI + Resend para envio de emails.
 ## Como usar localmente
 
 1. Crie uma conta no [Resend](https://resend.com/) e obtenha sua API Key
-2. Copie [backend/.env.example](backend/.env.example) para `backend/.env` e preencha as variáveis:
+2. Crie manualmente um arquivo `backend/.env` com as variáveis abaixo:
    ```
    RESEND_API_KEY=re_sua_chave_real_aqui
    RESEND_FROM_EMAIL=onboarding@resend.dev
