@@ -1,29 +1,60 @@
-# Sergio Pereyra - Portfolio
+# Sergio Pereyra — Portfolio
 
-A modern, dark-themed personal portfolio website for Sergio Pereyra, a full-stack developer focused on early-stage startups.
+Personal portfolio for Sergio Pereyra, a full-stack developer focused on early-stage startups. Dark-themed, fast, and fully static frontend with a Python backend for the contact form.
 
-## Sections
+## Structure
 
-1. **Hero** - Above the fold section with headline, subline, and CTA
-2. **What I Build** - Three service cards highlighting key offerings
-3. **Case Studies** - 2-3 short project stories (Problem → What I Built → Result)
-4. **Tech Stack** - Simple row of technologies I use
-5. **Final CTA** - Final call to action to book a free 20-min call
+```
+├── index.html          # Main portfolio page
+├── styles.css          # All styles
+└── backend/            # Contact form API
+    ├── main.py         # FastAPI app
+    ├── requirements.txt
+    ├── render.yaml     # Render deploy config
+    └── README.md       # Backend-specific docs
+```
 
-## Tech Stack
+## Frontend
 
-- HTML5
-- CSS3
-- Vanilla JavaScript
+Built with plain HTML, CSS, and vanilla JavaScript — no build step required.
 
-## Local Development
+**Sections:**
+- Hero with CTA
+- What I Build (service cards)
+- Case Studies (problem → solution → result)
+- Tech Stack
+- Experience
+- Contact form
 
-Just open `index.html` in your browser!
+**Run locally:** open `index.html` directly in the browser.
 
-## Deployment
+**Deploy:** any static host works — Vercel, Netlify, GitHub Pages.
 
-This portfolio is designed to be deployed anywhere you can serve static files (Vercel, Netlify, GitHub Pages, etc.)
+## Backend
 
-## Calendly Link
+FastAPI server that handles the contact form and sends emails via Resend.
 
-All CTA buttons point to: https://calendly.com/sergiopereyra
+**Stack:** Python · FastAPI · Resend · Uvicorn
+
+**Run locally:**
+```bash
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
+
+API available at `http://localhost:8000`.
+
+**Environment variables required:**
+| Variable | Description |
+|---|---|
+| `RESEND_API_KEY` | API key from resend.com |
+| `RESEND_FROM_EMAIL` | Sender address (default: `onboarding@resend.dev`) |
+| `RECIPIENT_EMAIL` | Where contact emails are delivered |
+
+**Deploy:** hosted on [Render](https://render.com) via `backend/render.yaml`. Add the env vars in the Render dashboard after connecting the repository.
+
+## Links
+
+- Live site: [sergiopereyra-dev.vercel.app](https://sergiopereyra-dev.vercel.app)
+- Book a call: [calendly.com/sergiopereyra](https://calendly.com/sergiopereyra)
