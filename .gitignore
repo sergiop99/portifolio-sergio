@@ -1,2 +1,8 @@
-RESEND_API_KEY=your_resend_api_key_here
-RECIPIENT_EMAIL=sergio@example.com
+__pycache__/
+*.pyc
+.env
+.venv
+venv/
+node_modules/
+*.log
+.DS_Store
