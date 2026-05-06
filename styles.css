@@ -449,6 +449,31 @@ h2 em{font-style:italic;color:var(--accent);}
   gap:0.4rem;
   margin-top:1.5rem;
 }
+.case-metrics{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0.8rem;
+  margin:1.2rem 0 1.8rem;
+}
+.case-metric{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.05);
+  border-radius:12px;
+  padding:0.9rem 0.7rem;
+  text-align:center;
+}
+.case-metric-val{
+  font-family:var(--font-display);
+  font-size:1.7rem;
+  font-weight:400;
+  color:var(--white);
+  margin-bottom:0.2rem;
+}
+.case-metric-lab{
+  font-size:0.72rem;
+  color:var(--muted);
+  letter-spacing:0.05em;
+}
 
 /* SHOPIFY / CLIENT WORK */
 .clients-section{background:var(--surface);}
@@ -661,6 +686,7 @@ footer a{color:var(--accent);text-decoration:none;}
   .projects-grid{grid-template-columns:1fr 1fr;}
   .services-grid{grid-template-columns:1fr 1fr;}
   .case-studies-grid{grid-template-columns:1fr 1fr;}
+  .case-metrics{grid-template-columns:1fr;}
   .clients-grid{grid-template-columns:1fr 1fr;}
   .beepr-wrap{grid-template-columns:1fr;gap:3rem;}
   .beepr-screens{grid-template-columns:repeat(4,1fr);}
@@ -677,6 +703,7 @@ footer a{color:var(--accent);text-decoration:none;}
   .projects-grid{grid-template-columns:1fr;}
   .services-grid{grid-template-columns:1fr;}
   .case-studies-grid{grid-template-columns:1fr;}
+  .case-metrics{grid-template-columns:1fr;}
   .clients-grid{grid-template-columns:1fr 1fr;}
   .exp-item{grid-template-columns:1fr;gap:0.5rem;}
   .metrics-row{grid-template-columns:1fr 1fr 1fr;}

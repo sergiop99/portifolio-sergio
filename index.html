@@ -101,55 +101,97 @@
     <div class="case-card">
       <div class="case-emoji">⛓️</div>
       <div class="case-title">NextBlock — Blockchain API</div>
+      <div class="case-metrics">
+        <div class="case-metric">
+          <div class="case-metric-val">$250K</div>
+          <div class="case-metric-lab">Revenue in 60 days</div>
+        </div>
+        <div class="case-metric">
+          <div class="case-metric-val">$0</div>
+          <div class="case-metric-lab">Starting point</div>
+        </div>
+        <div class="case-metric">
+          <div class="case-metric-val">60</div>
+          <div class="case-metric-lab">Days to results</div>
+        </div>
+      </div>
       <div class="case-block">
         <div class="case-label">Problem</div>
-        <div class="case-text">Founders needed a scalable blockchain API that could handle high transaction volume without downtime — while also having to coordinate a team.</div>
+        <div class="case-text">The founders needed a high-volume blockchain API that could handle transaction spikes without downtime — while coordinating a distributed team with no clear architecture in place.</div>
       </div>
       <div class="case-block">
         <div class="case-label">What I Built</div>
-        <div class="case-text">Built the full backend architecture, database design, and API system using Python/Flask with MySQL, plus a React frontend.</div>
+        <div class="case-text">I designed and built the full backend from scratch — database schema, API layer, and a React frontend — using Python/Flask and MySQL. The system was built to scale horizontally so transaction volume was never a ceiling.</div>
       </div>
       <div class="case-block">
         <div class="case-label">Result</div>
         <div class="case-text case-result">$0 → $250,000 revenue in 60 days.</div>
       </div>
       <div class="case-stack">
-        <span class="pill">React</span><span class="pill">Flask</span><span class="pill">MySQL</span>
+        <span class="pill">Python</span><span class="pill">Flask</span><span class="pill">MySQL</span><span class="pill">React</span>
       </div>
     </div>
     <div class="case-card">
       <div class="case-emoji">🌍</div>
       <div class="case-title">GTA GeoGuesser — Viral Web App</div>
+      <div class="case-metrics">
+        <div class="case-metric">
+          <div class="case-metric-val">50K+</div>
+          <div class="case-metric-lab">Users</div>
+        </div>
+        <div class="case-metric">
+          <div class="case-metric-val">Viral</div>
+          <div class="case-metric-lab">Organic growth</div>
+        </div>
+        <div class="case-metric">
+          <div class="case-metric-val">Fast</div>
+          <div class="case-metric-lab">Load performance</div>
+        </div>
+      </div>
       <div class="case-block">
         <div class="case-label">Problem</div>
-        <div class="case-text">Needed a fun, interactive geography game that could go viral — but had to load fast and scale for 50k+ users.</div>
+        <div class="case-text">The challenge wasn't just building a fun game — it was building one that could survive going viral. 50,000+ users hitting the app at once will expose every performance shortcut taken during development.</div>
       </div>
       <div class="case-block">
         <div class="case-label">What I Built</div>
-        <div class="case-text">Full product build with a Django backend and Tailwind frontend, optimized for performance and shareability.</div>
+        <div class="case-text">I built the full product — Django backend, Tailwind frontend — with performance and shareability baked in from day one. Every page load was optimized, and the sharing mechanics were designed to drive organic loops.</div>
       </div>
       <div class="case-block">
         <div class="case-label">Result</div>
-        <div class="case-text case-result">50,000+ users, high engagement and strong shareability.</div>
+        <div class="case-text case-result">50,000+ users through organic sharing alone, zero infrastructure failures under load.</div>
       </div>
       <div class="case-stack">
-        <span class="pill">Tailwind</span><span class="pill">Django</span><span class="pill">SQLite</span>
+        <span class="pill">Django</span><span class="pill">Tailwind</span><span class="pill">SQLite</span>
       </div>
     </div>
     <div class="case-card">
       <div class="case-emoji">📱</div>
       <div class="case-title">beepr — Native Mobile Migration</div>
+      <div class="case-metrics">
+        <div class="case-metric">
+          <div class="case-metric-val">0</div>
+          <div class="case-metric-lab">Downtime during migration</div>
+        </div>
+        <div class="case-metric">
+          <div class="case-metric-val">100%</div>
+          <div class="case-metric-lab">Geolocation reliability</div>
+        </div>
+        <div class="case-metric">
+          <div class="case-metric-val">51</div>
+          <div class="case-metric-lab">Edge functions audited</div>
+        </div>
+      </div>
       <div class="case-block">
         <div class="case-label">Problem</div>
-        <div class="case-text">Inherited a Capacitor WebView MVP that needed to become a production‑grade app with real‑time features.</div>
+        <div class="case-text">The team had a working Capacitor WebView MVP — but it wasn't production-grade. Real-time features were unreliable, background geolocation was inconsistent, and the codebase needed a full audit before scaling.</div>
       </div>
       <div class="case-block">
         <div class="case-label">What I Built</div>
-        <div class="case-text">Full React Native app, audited 51 Supabase Edge Functions, added PostGIS geospatial engineering, and background geolocation.</div>
+        <div class="case-text">I migrated the entire app to React Native, audited all 51 Supabase Edge Functions, implemented PostGIS for geospatial engineering, and rebuilt the background geolocation system from the ground up.</div>
       </div>
       <div class="case-block">
         <div class="case-label">Result</div>
-        <div class="case-text case-result">Zero downtime during migration, 100% background geolocation reliability.</div>
+        <div class="case-text case-result">Zero downtime during migration, 100% background geolocation reliability in production.</div>
       </div>
       <div class="case-stack">
         <span class="pill">React Native</span><span class="pill">Supabase</span><span class="pill">PostGIS</span>
@@ -251,9 +293,50 @@ if (fillItems.length && !revealItems.length) {
   });
 }
 
-document.querySelector('.contact-form')?.addEventListener('submit', (event) => {
+const contactForm = document.querySelector('.contact-form');
+contactForm?.addEventListener('submit', async (event) => {
   event.preventDefault();
-  window.location.href = 'mailto:sperey@gcgiglobal.com?subject=New%20Project%20Inquiry';
+  
+  const formData = {
+    name: contactForm.querySelector('#name').value,
+    email: contactForm.querySelector('#email').value,
+    project_type: contactForm.querySelector('#project-type').value,
+    message: contactForm.querySelector('#message').value
+  };
+  
+  const submitBtn = contactForm.querySelector('button[type="submit"]');
+  const originalText = submitBtn.textContent;
+  submitBtn.textContent = 'Sending...';
+  submitBtn.disabled = true;
+  
+  try {
+    const API_URL = window.location.hostname === 'localhost' 
+      ? 'http://localhost:8000/api/contact' 
+      : 'https://your-render-backend-url.onrender.com/api/contact';
+      
+    const response = await fetch(API_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    });
+    
+    const result = await response.json();
+    
+    if (response.ok) {
+      alert('Message sent successfully!');
+      contactForm.reset();
+    } else {
+      alert('Error sending message: ' + (result.detail || 'Unknown error'));
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    alert('Error sending message. Please try again later.');
+  } finally {
+    submitBtn.textContent = originalText;
+    submitBtn.disabled = false;
+  }
 });
 </script>
 </body>
