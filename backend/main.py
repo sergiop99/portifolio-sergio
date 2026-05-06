@@ -43,25 +43,48 @@ def get_email_settings() -> tuple[str, str, str]:
 async def send_contact_email(form: ContactForm):
     try:
         _, from_email, recipient_email = get_email_settings()
+        sender_email = str(form.email)
         subject = f"Novo contato do portfólio: {form.name}"
         html_content = f"""
         <h2>Nova mensagem do portfólio</h2>
         <p><strong>Nome:</strong> {escape(form.name)}</p>
-        <p><strong>Email:</strong> {escape(str(form.email))}</p>
+        <p><strong>Email:</strong> {escape(sender_email)}</p>
+        <p><strong>Tipo de Projeto:</strong> {escape(form.project_type)}</p>
+        <p><strong>Mensagem:</strong></p>
+        <p>{escape(form.message)}</p>
+        """
+        confirmation_subject = "Recebi sua mensagem"
+        confirmation_html = f"""
+        <h2>Mensagem recebida</h2>
+        <p>Oi {escape(form.name)}, recebi sua mensagem pelo portfólio.</p>
+        <p>Retorno assim que possível.</p>
+        <hr />
+        <p><strong>Resumo enviado:</strong></p>
         <p><strong>Tipo de Projeto:</strong> {escape(form.project_type)}</p>
         <p><strong>Mensagem:</strong></p>
         <p>{escape(form.message)}</p>
         """
 
-        params = {
+        internal_email = resend.Emails.send({
             "from": from_email,
             "to": [recipient_email],
             "subject": subject,
             "html": html_content,
-        }
+            "reply_to": sender_email,
+        })
+        confirmation_email = resend.Emails.send({
+            "from": from_email,
+            "to": [sender_email],
+            "subject": confirmation_subject,
+            "html": confirmation_html,
+        })
 
-        email = resend.Emails.send(params)
-        return {"success": True, "message": "Email enviado com sucesso!", "id": email["id"]}
+        return {
+            "success": True,
+            "message": "Emails enviados com sucesso!",
+            "id": internal_email["id"],
+            "confirmation_id": confirmation_email["id"],
+        }
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Erro ao enviar email: {str(e)}")
