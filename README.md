@@ -1,6 +1,6 @@
 # Sergio Pereyra — Portfolio
 
-Personal portfolio for Sergio Pereyra, a full-stack developer focused on early-stage startups. Dark-themed, fast, and fully static frontend with a Python backend for the contact form.
+Personal portfolio for Sergio Pereyra, a technical delivery leader and hands-on engineer for SaaS, AI and mobile products. Dark-themed, fast, and fully static frontend with a Python backend for the contact form.
 
 ## Structure
 
@@ -57,4 +57,9 @@ API available at `http://localhost:8000`.
 ## Links
 
 - Live site: [sergiopereyra-dev.vercel.app](https://sergiopereyra-dev.vercel.app)
-- Book a call: [calendly.com/sergiopereyra](https://calendly.com/sergiopereyra)
+- GCG: [galindo-consulting.vercel.app](https://galindo-consulting.vercel.app/)
+- Upwork links are labeled as Upwork, not as scheduling links.
+
+## Content update
+
+Interviewiz and NextBlock narratives follow Sergio’s supplied case descriptions. NextBlock’s approximate US$250K is processing volume, not revenue. Unscoped reliability and guaranteed timeline claims were removed. The existing FastAPI/Resend contact integration is retained, with browser validation, inline status and a 20-second timeout. No test messages are sent during layout checks.

@@ -3,24 +3,31 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Sergio Pereyra - Full-Stack Developer</title>
+<title>Sergio Pereyra — Technical Leadership & Product Delivery</title>
+<meta name="description" content="Technical leadership and hands-on engineering for SaaS, AI and mobile products. Sergio Pereyra leads scope, architecture and delivery at Galindo Consulting Group.">
+<link rel="canonical" href="https://sergiopereyra-dev.vercel.app/">
+<meta property="og:title" content="Sergio Pereyra — Technical Leadership & Product Delivery">
+<meta property="og:description" content="SaaS, AI and mobile products. Clear scope, hands-on engineering and accountable delivery.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sergiopereyra-dev.vercel.app/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-<div class="cursor" id="cursor"></div>
+<a class="skip-link" href="#home">Skip to content</a>
 
 <nav>
   <a class="nav-logo" href="#home">Sergio <span>Pereyra</span></a>
-  <ul class="nav-links">
+  <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+  <ul class="nav-links" id="nav-links">
     <li><a href="#services">What I Build</a></li>
     <li><a href="#case-studies">Case Studies</a></li>
     <li><a href="#tech">Tech Stack</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="https://www.upwork.com/freelancers/~01c3d3c26484fa3d2a?referrer_url_path=%2Ftalent%2F" target="_blank" rel="noreferrer" class="nav-cta">Book a Call</a>
+  <a href="https://www.upwork.com/freelancers/~01c3d3c26484fa3d2a?referrer_url_path=%2Ftalent%2F" target="_blank" rel="noreferrer" class="nav-cta">Work with me on Upwork</a>
 </nav>
 
 <section class="hero" id="home">
@@ -28,28 +35,19 @@
   <div class="hero-glow2"></div>
 
   <div class="hero-text">
-    <div class="hero-eyebrow">For Early‑Stage Startups</div>
-    <h1>Need to launch a product but don't want to manage an entire engineering team?</h1>
-    <p class="hero-sub">I help startups build web applications, mobile apps, APIs, and backend systems from idea to launch, acting as a technical partner rather than just another developer.</p>
-     <h3>Common Founder Problems</h3>
-        <p class="hero-sub">You have an idea but:</p>
-        <ul style="padding-left: 2rem; list-style-position: inside;">
-          <li>No technical co-founder</li>
-          <li>Developers keep missing deadlines</li>
-          <li>MVP costs keep growing</li>
-          <li>Product scope keeps changing</li>
-          <li>You're not sure what to build first</li>
-        </ul>
-        <br>
-    <p class="hero-sub">That's where I help.</p>
+    <div class="hero-eyebrow">For founders, consultants & product teams</div>
+    <h1>Technical leadership.<br>Hands-on engineering.<br><em>Products shipped.</em></h1>
+    <p class="hero-sub">I'm Sergio Pereyra. I define scope, make architecture decisions and lead delivery for SaaS, AI and mobile products. I stay close to the code, from the first brief through release.</p>
     <div class="hero-actions">
-      <a href="https://www.upwork.com/freelancers/~01c3d3c26484fa3d2a?referrer_url_path=%2Ftalent%2F" target="_blank" rel="noreferrer" class="btn btn-cyan">Book a Startup Technical Review</a>
+      <a href="#contact" class="btn btn-cyan">Discuss your project ↗</a>
+      <a href="#case-studies" class="btn btn-ghost">See my work ↓</a>
     </div>
+    <p class="hero-affiliation">Project Manager & Delivery Director at <a href="https://galindo-consulting.vercel.app/" target="_blank" rel="noopener noreferrer">Galindo Consulting Group ↗</a></p>
   </div>
 
   <div class="hero-visual">
     <div class="photo-frame">
-      <img src="./sergio.jpeg" alt="Sergio Pereyra">
+      <img src="./sergio.jpeg" alt="Sergio Pereyra" width="620" height="775" fetchpriority="high">
       <div class="photo-overlay"></div>
     </div>
   </div>
@@ -84,155 +82,76 @@
   </div>
 </div>
 
+<section class="case-studies-section" id="case-studies">
+  <div class="section-tag">Selected Work</div>
+  <h2>The decisions behind <em>the delivery.</em></h2>
+  <p class="section-intro">My role, the engineering challenge and what reached production.</p>
+  <div class="case-studies-grid">
+    <article class="case-card featured-case">
+      <img class="case-image" src="./interviewiz.png" alt="Interviewiz AI interview preparation platform" loading="lazy" width="1000" height="650">
+      <div class="case-content">
+        <p class="case-kicker">01 / AI & SAAS</p>
+        <h3 class="case-title"><a href="https://interviewiz.com/" target="_blank" rel="noopener noreferrer">Interviewiz ↗</a></h3>
+        <p class="case-lead">An interview preparation idea became a live AI subscription product.</p>
+        <div class="case-block"><div class="case-label">My role</div><p class="case-text">I led delivery end to end. We defined the product, subscription model and architecture, then built the platform.</p></div>
+        <div class="case-block"><div class="case-label">The technical decision</div><p class="case-text">Model calls took about 20 seconds and blocked the interface. I moved them to asynchronous processing, designed subscription logic and added API usage limits.</p></div>
+        <div class="case-outcome"><strong>10,000+</strong><span>monthly sessions within weeks of launch</span></div>
+        <p class="case-text">Billing operated without reported incidents during that early launch period.</p>
+        <div class="case-stack"><span class="pill">OpenAI</span><span class="pill">FastAPI</span><span class="pill">Supabase</span><span class="pill">AWS</span></div>
+      </div>
+    </article>
+    <article class="case-card featured-case">
+      <img class="case-image" src="./nextblock.jpeg" alt="NextBlock blockchain API platform" loading="lazy" width="1000" height="650">
+      <div class="case-content">
+        <p class="case-kicker">02 / API PLATFORM & DELIVERY</p>
+        <h3 class="case-title"><a href="https://nextblock.io/" target="_blank" rel="noopener noreferrer">NextBlock ↗</a></h3>
+        <p class="case-lead">A fixed launch date needed a smaller, agreed first release.</p>
+        <div class="case-block"><div class="case-label">The scope decision</div><p class="case-text">In the first week, we moved noncritical features to version two. The founder approved what would stay out before development began.</p></div>
+        <div class="case-block"><div class="case-label">What we delivered</div><p class="case-text">A React dashboard, self-service API keys, usage metering, four subscription tiers with Stripe, rate limiting and global routing.</p></div>
+        <div class="case-outcome"><strong>Day 28</strong><span>product launch</span></div>
+        <p class="case-text"><strong>Approximately US$250,000 processed</strong> by the platform in its first 60 days.</p>
+        <div class="case-stack"><span class="pill">React</span><span class="pill">APIs</span><span class="pill">Stripe</span><span class="pill">SaaS</span></div>
+      </div>
+    </article>
+    <article class="case-card secondary-case">
+      <p class="case-kicker">03 / MOBILE ENGINEERING</p>
+      <h3 class="case-title"><a href="https://apps.apple.com/us/app/beepr-your-cannabis-your-way/id6749667346" target="_blank" rel="noopener noreferrer">beepr ↗</a></h3>
+      <div class="case-block"><div class="case-label">The challenge</div><p class="case-text">Move a Capacitor WebView MVP toward a native mobile experience, with work on real-time behavior and background geolocation.</p></div>
+      <div class="case-block"><div class="case-label">My contribution</div><p class="case-text">React Native migration, a review of 51 Supabase Edge Functions and PostGIS geospatial implementation, including Travel Mode and background location workflows.</p></div>
+      <div class="case-stack"><span class="pill">React Native</span><span class="pill">Expo</span><span class="pill">Supabase</span><span class="pill">PostGIS</span></div>
+    </article>
+    <article class="case-card secondary-case">
+      <p class="case-kicker">04 / CONSUMER WEB</p>
+      <h3 class="case-title"><a href="https://gta-geoguesser.com/" target="_blank" rel="noopener noreferrer">GTA GeoGuesser ↗</a></h3>
+      <div class="case-block"><div class="case-label">The challenge</div><p class="case-text">Build a game experience with fast page loads and sharing built into the product.</p></div>
+      <div class="case-block"><div class="case-label">My contribution</div><p class="case-text">Django backend and Tailwind frontend development, with performance optimization and sharing mechanics.</p></div>
+      <div class="case-stack"><span class="pill">Django</span><span class="pill">Tailwind</span><span class="pill">SQLite</span></div>
+    </article>
+  </div>
+  <p class="case-note">Interviewiz and NextBlock results are reported from my project experience. Sessions are not unique users. NextBlock's figure is platform processing volume, not revenue attributed to my work.</p>
+</section>
+
 <section class="services-section reveal" id="services">
   <div class="section-tag">What I Build</div>
-  <h2>Services that ship fast, scale safely.</h2>
+  <h2>Where I take <em>ownership.</em></h2>
   <div class="services-grid">
     <div class="service-card">
       <div class="service-icon">🔌</div>
-      <div class="service-title">APIs & backend systems</div>
-      <div class="service-desc">Scalable APIs, database design, and server architecture using Python/FastAPI/Django</div>
+      <div class="service-title">Architecture & backend systems</div>
+      <div class="service-desc">API design, data models and backend implementation, with clear boundaries for integrations and usage.</div>
     </div>
     <div class="service-card">
       <div class="service-icon">📱</div>
-      <div class="service-title">Mobile & web apps</div>
-      <div class="service-desc">Full product builds with React and Node — from wireframe to deployed app</div>
+      <div class="service-title">SaaS, AI & mobile products</div>
+      <div class="service-desc">Product implementation across web, AI workflows and native mobile, including subscriptions and external services.</div>
     </div>
     <div class="service-card">
       <div class="service-icon">🔧</div>
-      <div class="service-title">Legacy fixes & audits</div>
-      <div class="service-desc">Inherited a messy codebase? I clean it up and make it scale</div>
+      <div class="service-title">Technical leadership & delivery</div>
+      <div class="service-desc">Scope definition, codebase reviews, engineering coordination and acceptance criteria that make progress visible.</div>
     </div>
   </div>
 </section>
-
-<section class="case-studies-section reveal" id="case-studies">
-  <div class="section-tag">Case Studies</div>
-  <h2>What I've built for founders.</h2>
-  <div class="case-studies-grid">
-    
-    <div class="case-card" style="position: relative;">
-      <div class="case-emoji">⛓️</div>
-      <div class="case-title">
-        <a href="https://nextblock.io" target="_blank" rel="noopener noreferrer" 
-           style="text-decoration: none; color: inherit; position: static;">
-          NextBlock — Blockchain API ↗
-          <span style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 1;"></span>
-        </a>
-      </div>
-      <div class="case-metrics">
-        <div class="case-metric">
-          <div class="case-metric-val">$250K</div>
-          <div class="case-metric-lab">Revenue in 60 days</div>
-        </div>
-        <div class="case-metric">
-          <div class="case-metric-val">$0</div>
-          <div class="case-metric-lab">Starting point</div>
-        </div>
-        <div class="case-metric">
-          <div class="case-metric-val">60</div>
-          <div class="case-metric-lab">Days to results</div>
-        </div>
-      </div>
-      <div class="case-block">
-        <div class="case-label">Problem</div>
-        <div class="case-text">The founders needed a high-volume blockchain API that could handle transaction spikes without downtime — while coordinating a distributed team with no clear architecture in place.</div>
-      </div>
-      <div class="case-block">
-        <div class="case-label">What I Built</div>
-        <div class="case-text">I designed and built the full backend from scratch — database schema, API layer, and a React frontend — using Python/Flask and MySQL. The system was built to scale horizontally so transaction volume was never a ceiling.</div>
-      </div>
-      <div class="case-block">
-        <div class="case-label">Result</div>
-        <div class="case-text case-result">$0 → $250,000 revenue in 60 days.</div>
-      </div>
-      <div class="case-stack" style="position: relative; z-index: 2;">
-        <span class="pill">Python</span><span class="pill">Flask</span><span class="pill">MySQL</span><span class="pill">React</span>
-      </div>
-    </div>
-
-    <div class="case-card" style="position: relative;">
-      <div class="case-emoji">🌍</div>
-      <div class="case-title">
-        <a href="https://gta-geoguesser.com" target="_blank" rel="noopener noreferrer" 
-           style="text-decoration: none; color: inherit; position: static;">
-          GTA GeoGuesser — Viral Web App ↗
-          <span style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 1;"></span>
-        </a>
-      </div>
-      <div class="case-metrics">
-        <div class="case-metric">
-          <div class="case-metric-val">50K+</div>
-          <div class="case-metric-lab">Users</div>
-        </div>
-        <div class="case-metric">
-          <div class="case-metric-val">Viral</div>
-          <div class="case-metric-lab">Organic growth</div>
-        </div>
-        <div class="case-metric">
-          <div class="case-metric-val">Fast</div>
-          <div class="case-metric-lab">Load performance</div>
-        </div>
-      </div>
-      <div class="case-block">
-        <div class="case-label">Problem</div>
-        <div class="case-text">The challenge wasn't just building a fun game — it was building one that could survive going viral. 50,000+ users hitting the app at once will expose every performance shortcut taken during development.</div>
-      </div>
-      <div class="case-block">
-        <div class="case-label">What I Built</div>
-        <div class="case-text">I built the full product — Django backend, Tailwind frontend — with performance and shareability baked in from day one. Every page load was optimized, and the sharing mechanics were designed to drive organic loops.</div>
-      </div>
-      <div class="case-block">
-        <div class="case-label">Result</div>
-        <div class="case-text case-result">50,000+ users through organic sharing alone, zero infrastructure failures under load.</div>
-      </div>
-      <div class="case-stack" style="position: relative; z-index: 2;">
-        <span class="pill">Django</span><span class="pill">Tailwind</span><span class="pill">SQLite</span>
-      </div>
-    </div>
-
-    <div class="case-card" style="position: relative;">
-      <div class="case-emoji">📱</div>
-      <div class="case-title">
-        <a href="https://apps.apple.com/us/app/beepr-your-cannabis-your-way/id6749667346" target="_blank" rel="noopener noreferrer" 
-           style="text-decoration: none; color: inherit; position: static;">
-          beepr — Native Mobile Migration ↗
-          <span style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 1;"></span>
-        </a>
-      </div>
-      <div class="case-metrics">
-        <div class="case-metric">
-          <div class="case-metric-val">0</div>
-          <div class="case-metric-lab">Downtime during migration</div>
-        </div>
-        <div class="case-metric">
-          <div class="case-metric-val">100%</div>
-          <div class="case-metric-lab">Geolocation reliability</div>
-        </div>
-        <div class="case-metric">
-          <div class="case-metric-val">51</div>
-          <div class="case-metric-lab">Edge functions audited</div>
-        </div>
-      </div>
-      <div class="case-block">
-        <div class="case-label">Problem</div>
-        <div class="case-text">The team had a working Capacitor WebView MVP — but it wasn't production-grade. Real-time features were unreliable, background geolocation was inconsistent, and the codebase needed a full audit before scaling.</div>
-      </div>
-      <div class="case-block">
-        <div class="case-label">What I Built</div>
-        <div class="case-text">I migrated the entire app to React Native, audited all 51 Supabase Edge Functions, implemented PostGIS for geospatial engineering, and rebuilt the background geolocation system from the ground up.</div>
-      </div>
-      <div class="case-block">
-        <div class="case-label">Result</div>
-        <div class="case-text case-result">Zero downtime during migration, 100% background geolocation reliability in production.</div>
-      </div>
-      <div class="case-stack" style="position: relative; z-index: 2;">
-        <span class="pill">React Native</span><span class="pill">Supabase</span><span class="pill">PostGIS</span>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 <section class="tech-section reveal" id="tech">
   <div class="section-tag">Tech Stack</div>
@@ -257,9 +176,9 @@
     <div class="exp-item">
       <div class="exp-date"><span class="exp-dot"></span>Mar 2026 - Present</div>
       <div>
-        <div class="exp-role">React Native Engineer</div>
+        <div class="exp-role">React Native Engineering · beepr</div>
         <div class="exp-company">The Galindo Consulting Group · beepr</div>
-        <div class="exp-desc">Leading the full native migration of beepr from a Capacitor WebView prototype to a production-grade React Native (Expo Bare) app. Audited 51 Supabase Edge Functions, implemented PostGIS geospatial engineering, designed Travel Mode, and achieved zero-downtime migration with 100% background geolocation reliability.</div>
+        <div class="exp-desc">Working on the native migration of beepr from a Capacitor WebView prototype to React Native (Expo Bare). Contributions include a review of 51 Supabase Edge Functions, PostGIS geospatial implementation, Travel Mode and background location workflows.</div>
         <div class="exp-tags"><span class="pill">React Native</span><span class="pill">Expo</span><span class="pill">Supabase</span><span class="pill">PostGIS</span><span class="pill">TypeScript</span></div>
       </div>
     </div>
@@ -268,7 +187,7 @@
       <div>
         <div class="exp-role">Full Stack SaaS Developer</div>
         <div class="exp-company">Freelance / Independent</div>
-        <div class="exp-desc">Building and shipping AI-powered SaaS products that generate revenue fast. Delivered NextBlock ($250K in 60 days), GTA GeoGuesser (50K+ users), Interviewiz, and a Calendly-style scheduling platform. Clean architecture, usage-based billing, and payment integrations from day one.</div>
+        <div class="exp-desc">Product development across Interviewiz, NextBlock, GTA GeoGuesser and a scheduling platform. Work spans architecture, application development, usage metering, subscriptions and payment integrations. See the case studies above for project-specific outcomes.</div>
         <div class="exp-tags"><span class="pill">Next.js</span><span class="pill">Flask</span><span class="pill">AI APIs</span><span class="pill">MySQL</span><span class="pill">Stripe</span></div>
       </div>
     </div>
@@ -284,9 +203,15 @@
   </div>
 </section>
 
+<section class="gcg-section" id="gcg">
+  <div class="section-tag">Personal leadership. Team delivery.</div>
+  <h2>One point of contact.<br><em>A team when the work needs one.</em></h2>
+  <div class="gcg-grid"><p>I lead scope, technical architecture and software delivery at Galindo Consulting Group. I stay involved in implementation and coordinate the engineers working on the project.</p><div><p>For engagements that need a broader team, we agree on responsibilities, capacity and delivery milestones together. My portfolio shows my contribution. The GCG site introduces the team and how we work.</p><a class="btn btn-ghost" href="https://galindo-consulting.vercel.app/" target="_blank" rel="noopener noreferrer">Meet Galindo Consulting Group ↗</a></div></div>
+</section>
+
 <section class="cta-final reveal" id="cta-final">
-  <h2>Working on something that needs a solid backend or a full product built? Let's talk.</h2>
-  <a href="https://www.upwork.com/freelancers/~01c3d3c26484fa3d2a?referrer_url_path=%2Ftalent%2F" target="_blank" rel="noreferrer" class="btn btn-cyan">Book a free 20‑min call</a>
+  <h2>An idea to validate.<br>A product to finish.<br><em>A delivery to get moving.</em></h2>
+  <a href="https://www.upwork.com/freelancers/~01c3d3c26484fa3d2a?referrer_url_path=%2Ftalent%2F" target="_blank" rel="noreferrer" class="btn btn-cyan">Work with me on Upwork ↗</a>
 </section>
 
 <section class="contact-section reveal" id="contact">
@@ -296,11 +221,11 @@
     <form class="contact-form">
       <div class="f-group">
         <label for="name">Name</label>
-        <input id="name" name="name" type="text" placeholder="Jane Smith">
+        <input id="name" name="name" type="text" autocomplete="name" maxlength="100" required placeholder="Jane Smith">
       </div>
       <div class="f-group">
         <label for="email">Email</label>
-        <input id="email" name="email" type="email" placeholder="jane@company.com">
+        <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required placeholder="jane@company.com">
       </div>
       <div class="f-group">
         <label for="project-type">Project Type</label>
@@ -308,10 +233,11 @@
       </div>
       <div class="f-group">
         <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Tell me about your project, timeline, and budget..."></textarea>
+        <textarea id="message" name="message" maxlength="5000" required placeholder="Tell me about your project, timeline, and budget..."></textarea>
       </div>
       <button class="btn btn-cyan" type="submit">Send Message →</button>
-      <p class="exp-desc">I build MVPs in 4-6 weeks with clean architecture, payments, auth, and scalability included from day one. Let's talk about your idea.</p>
+      <p id="form-status" role="status" aria-live="polite"></p>
+      <p class="exp-desc">Share the goal, current state and any deadline. We will agree on scope and dependencies before committing to a delivery plan.</p>
     </form>
     <div class="contact-info">
       <a class="c-item" href="mailto:sperey@gcgiglobal.com">
@@ -331,76 +257,62 @@
 </section>
 
 <footer>
-  <span>Sergio Pereyra - Full-Stack Developer</span>
-  <span>Built for product, scale, and revenue. <a href="#home">Back to top</a></span>
+  <span>Sergio Pereyra — Technical Leadership & Product Delivery</span>
+  <span>From scope to release. <a href="#home">Back to top</a></span>
 </footer>
 
 <script>
-const cursor = document.getElementById('cursor');
-window.addEventListener('mousemove', (event) => {
-  if (!cursor) return;
-  cursor.style.transform = `translate(${event.clientX}px, ${event.clientY}px)`;
-});
-
-const revealItems = document.querySelectorAll('.reveal');
-const fillItems = document.querySelectorAll('.skill-fill');
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) return;
-    entry.target.classList.add('visible');
-    entry.target.querySelectorAll('.skill-fill').forEach((fill) => {
-      fill.style.width = fill.dataset.width || '0%';
-    });
-  });
-}, { threshold: 0.18 });
-
-revealItems.forEach((item) => revealObserver.observe(item));
-if (fillItems.length && !revealItems.length) {
-  fillItems.forEach((fill) => {
-    fill.style.width = fill.dataset.width || '0%';
-  });
-}
+const menu = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+function closeMenu(){menu.setAttribute('aria-expanded','false');navLinks.classList.remove('open');}
+menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')==='true';menu.setAttribute('aria-expanded',String(!open));navLinks.classList.toggle('open',!open);});
+navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeMenu));
+document.addEventListener('keydown',event=>{if(event.key==='Escape'){closeMenu();}});
 
 const contactForm = document.querySelector('.contact-form');
 contactForm?.addEventListener('submit', async (event) => {
   event.preventDefault();
-  
+
+  if(!contactForm.reportValidity()) return;
+  const status=document.getElementById('form-status');
+  status.textContent='Sending your message…';
   const formData = {
     name: contactForm.querySelector('#name').value,
     email: contactForm.querySelector('#email').value,
     project_type: contactForm.querySelector('#project-type').value,
     message: contactForm.querySelector('#message').value
   };
-  
+
   const submitBtn = contactForm.querySelector('button[type="submit"]');
   const originalText = submitBtn.textContent;
   submitBtn.textContent = 'Sending...';
   submitBtn.disabled = true;
-  
+
   try {
-    const API_URL = window.location.hostname === 'localhost' 
-      ? 'http://localhost:8000/api/contact' 
+    const API_URL = ['localhost','127.0.0.1'].includes(window.location.hostname)
+      ? 'http://localhost:8000/api/contact'
       : 'https://portifolio-sergio-backend.onrender.com/api/contact';
-      
+
     const response = await fetch(API_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(formData)
+      body: JSON.stringify(formData),
+      signal: AbortSignal.timeout(20000)
     });
-    
+
     const result = await response.json();
-    
+
     if (response.ok) {
-      alert('Message sent successfully!');
+      status.textContent='Message sent. Thank you for getting in touch.';
       contactForm.reset();
     } else {
-      alert('Error sending message: ' + (result.detail || 'Unknown error'));
+      status.textContent='The message could not be sent. Please email sperey@gcgiglobal.com directly.';
     }
   } catch (error) {
     console.error('Error:', error);
-    alert('Error sending message. Please try again later.');
+    status.textContent='The contact service is unavailable. Please email sperey@gcgiglobal.com directly.';
   } finally {
     submitBtn.textContent = originalText;
     submitBtn.disabled = false;
