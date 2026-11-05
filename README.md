@@ -57,8 +57,11 @@ API available at `http://localhost:8000`.
 ## Links
 
 - Live site: [sergiopereyra-dev.vercel.app](https://sergiopereyra-dev.vercel.app)
-- GCG: [galindo-consulting.vercel.app](https://galindo-consulting.vercel.app/)
-- Upwork links are labeled as Upwork, not as scheduling links.
+- GCGI: [galindo-consulting.vercel.app](https://galindo-consulting.vercel.app/)
+- Primary CTAs use direct email. The 20-minute scoping call is requested by email until Sergio provides his personal booking URL.
+- GCGI team size: 14. Confirmed project range: USD 8,000–40,000.
+- First milestone within two weeks is a target, subject to agreed scope and dependencies.
+- For company marketing posts, use https://galindo-consulting.vercel.app/ as the destination; this site remains Sergio’s portfolio.
 
 ## Content update
 
