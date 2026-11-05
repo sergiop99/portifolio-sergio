@@ -66,3 +66,7 @@ API available at `http://localhost:8000`.
 ## Content update
 
 Interviewiz and NextBlock narratives follow Sergio’s supplied case descriptions. NextBlock’s approximate US$250K is processing volume, not revenue. Unscoped reliability and guaranteed timeline claims were removed. The existing FastAPI/Resend contact integration is retained, with browser validation, inline status and a 20-second timeout. No test messages are sent during layout checks.
+
+## November 5 follow-up
+
+The closing section combines Cal.com booking, direct email and the existing contact form under Start a Project. The duplicated CTA section is removed. Sergio confirmed his personal record of 500 delivered projects over 20 years, distinct from GCGI’s company total of more than 4,100. The hero attributes the personal record to Sergio.
