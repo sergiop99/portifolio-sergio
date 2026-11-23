@@ -60,7 +60,7 @@ API available at `http://localhost:8000`.
 - GCGI: [galindo-consulting.vercel.app](https://galindo-consulting.vercel.app/)
 - The header books a 30-minute scoping call at https://cal.com/sergio-pereyra-fpngvk/30min. The closing CTA uses direct email.
 - GCGI team size: 14. Confirmed project range: USD 8,000–40,000.
-- First milestone within two weeks is a target, subject to agreed scope and dependencies.
+- First milestone within one week is a target, subject to agreed scope and dependencies.
 - For company marketing posts, use https://galindo-consulting.vercel.app/ as the destination; this site remains Sergio’s portfolio.
 
 ## Content update
